@@ -1,0 +1,94 @@
+body{
+    
+    text-transform: capitalize;
+
+    background-image: linear-gradient( to right, #cc2b5e, #753a88);
+    
+    font-family: 'Almarai', sans-serif;
+}
+.divnav_right{
+    display: inline;
+    float: right;
+    padding: 10px;
+}
+#select{
+    background:transparent; 
+     border:none;
+      font-size: 22px;
+}
+.language{
+    color:black;
+}
+#logo{
+    width: 150px;
+    height: 90px;
+    padding-right: 8px;
+}
+
+h3{
+    color: white;
+    display: inline;
+    position: absolute;
+    left: 121px;
+    top:19px;
+    font-family: 'Almarai', sans-serif;
+
+
+}
+#login{
+    border-radius: 5px;
+     background-color:transparent;
+     font-size: 18px;
+    border:none;
+    color: black;
+    
+}
+#login:hover{
+color: white;
+background-color: #552b64;
+}
+.navright{
+    position: relative;
+    margin-right: 20px;
+    color:white;
+}
+
+article{
+    text-align: center;
+}
+article div{
+    display: inline-block;
+    width: 19%;
+    background-color: #fff;
+    height: 450px;
+    margin: 30px 20px;
+    border-radius: 60px ;
+}
+article div img{
+    width:  100%;
+    height: 280px;
+    margin-bottom: 10px;
+    border-radius: 60px 60px 0 0;
+}
+article div p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 200px;
+    color:#cc2b5e;
+}
+article div button{
+    background-color: #753a88;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+  
+    color:white;
+}
+button:hover{
+    background-color:#cc2b5e ;
+    color: black;
+}

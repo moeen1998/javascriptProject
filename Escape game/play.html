@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/all.min.css">
+        <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/fontawesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body >
+        <audio id="musicplay" loop="true">
+            <source src="music.mp3"  type="audio/mpeg">
+        </audio>
+
+        <button onclick="musicplay(this)" data-ispaly="1"><i class="fa-solid fa-volume-xmark"></i></button>
+        
+        <div class="contener" >    
+            <div class="parent">
+                <div class="child"> 
+                    
+                    <img src="3.PNG" alt="">
+                    <p id="startgame" onclick="viduoplay()">Start Game</p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <script src="script.js"></script> 
+    </body>
+</html>
