@@ -424,7 +424,7 @@ window.addEventListener("load",()=>{
         checkCollision(rect1 , rect2){
             return(
                 //if the rectangles touches each other 
-                // rect1.x < rect2.x + rect2.width &&
+                rect1.x < rect2.x + rect2.width &&
                 // the rectangle doesn't go out the screen
                 rect1.x + rect1.width > rect2.x &&
                 // the rectangles is over each other in y axces from top 
