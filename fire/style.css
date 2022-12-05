@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #000;
+}
+#can{
+    border: 2px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: #4d79bc; */
+    background-image: url('imgs/back.webp');
+    background-size: cover;
+    filter: brightness(.7);
+    max-width: 100%;
+    max-height: 100vh;
+}
