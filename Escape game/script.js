@@ -32,8 +32,8 @@ function startGame(){
     music.play()
     icon[0].setAttribute("class","fa-solid fa-volume-high")
     content.innerHTML=""
-    document.body.style.backgroundImage = "url('background2.gif')";
-    content.innerHTML=`<img src="shovel.png" onclick="changeposition(this)" alt="" style='width: 150px;
+    document.body.style.backgroundImage = "url('imgs/background2.gif')";
+    content.innerHTML=`<img src="imgs/shovel.png" onclick="changeposition(this)" alt="" style='width: 150px;
     left: 39%;
     top: 63%;
     opacity: .8;
@@ -44,7 +44,7 @@ function startGame(){
 
 function changeposition(shovel){
     shovel.remove();
-    content.innerHTML=`<img src="shovel.png" id="shove"  alt="" style='width: 129px;
+    content.innerHTML=`<img src="imgs/shovel.png" id="shove"  alt="" style='width: 129px;
     left: 91%;
     top: 1%;
     transform: rotate(-45deg);
@@ -60,7 +60,7 @@ function changeposition(shovel){
 
 function firstquiz(){
     content.innerHTML+=`
-    <div class='hide' id='garden' style='background-image: url(garden.png);
+    <div class='hide' id='garden' style='background-image: url("imgs/garden.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -83,7 +83,7 @@ function addsholve(e){
     var gardn=document.getElementById("garden");
     var shovel=document.getElementById("shove");
     if(sholve){
-        gardn.innerHTML=`<img id="posi_sholve" src="shovel.png"  alt="" style=' width: 195px;
+        gardn.innerHTML=`<img id="posi_sholve" src="imgs/shovel.png"  alt="" style=' width: 195px;
         left: 38%;
         top: -8%;
         position: absolute;'></img>
@@ -94,7 +94,7 @@ function addsholve(e){
             document.getElementById("posi_sholve").style.top= (parseInt(document.getElementById("posi_sholve").style.top)+1)+"%"
             if(parseInt(document.getElementById("posi_sholve").style.top) == 19){
                 document.getElementById("posi_sholve").remove();
-                gardn.style.backgroundImage = "url('opengarden.png')";
+                gardn.style.backgroundImage = "url('imgs/opengarden.png')";
                 clearInterval(interval)
             }       
         },50)
@@ -105,7 +105,7 @@ function addsholve(e){
 
 function quize1_sol(e){ 
     content.innerHTML="";
-    content.innerHTML=`<img src="boxquiz.png" alt="" style='width: 98px;
+    content.innerHTML=`<img src="imgs/boxquiz.png" alt="" style='width: 98px;
     left: 92.5%;
     top: 6%;
     transform: rotate(30deg);
@@ -120,7 +120,7 @@ function quize1_sol(e){
 }
 
 function showboxsol(){
-    content.innerHTML+=`<img class='hide' src="boxquiz.png" alt="" style='
+    content.innerHTML+=`<img class='hide' src="imgs/boxquiz.png" alt="" style='
     width: 770px;
     height: 464px;
     position: absolute;
@@ -132,7 +132,7 @@ function showboxsol(){
 
 function quiz2_box(){  
     content.innerHTML+=`
-    <div class='hide' id='box' style='background-image: url(box.png);
+    <div class='hide' id='box' style='background-image: url("imgs/box.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -166,19 +166,19 @@ function setnumbers(element){
     solve = document.getElementsByClassName("numbers")
     if(solve[0].innerText==1 && solve[1].innerText==9 && solve[2].innerText==3 && solve[3].innerText==2){
         document.getElementById("box").innerHTML="";
-        document.getElementById("box").style.backgroundImage = "url('openbox.png')";
-        document.getElementById("box").innerHTML+=`<img id="key" src="key.png"  alt="" style='    width: 93px;
+        document.getElementById("box").style.backgroundImage = "url('imgs/openbox.png')";
+        document.getElementById("box").innerHTML+=`<img id="key" src="imgs/key.png"  alt="" style='    width: 93px;
         left: 43%;
         top: 61%;
         position: absolute;
         transform: rotate(-7deg);
         opacity: 0.8;' onclick='get_key()'></img>`;
-        document.body.style.backgroundImage = "url('background2_2.gif')";
+        document.body.style.backgroundImage = "url('imgs/background2_2.gif')";
     }
 }
 
 function get_key(){
-    content.innerHTML=`<img id="key" src="key.png"  alt="" style='width: 118px;
+    content.innerHTML=`<img id="key" src="imgs/key.png"  alt="" style='width: 118px;
     left: 92%;
     top: 3%;
     position: absolute;
@@ -193,7 +193,7 @@ function get_key(){
 }
 
 function show_boor(){
-    content.innerHTML+=`<div id="door" class='hide' style='background-image: url(door.png);
+    content.innerHTML+=`<div id="door" class='hide' style='background-image: url("imgs/door.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -211,12 +211,12 @@ function open_door(e){
     if(sholve){
         document.getElementById("key").remove();  
         var door=document.getElementById("door");
-        door.style.backgroundImage = "url('thedoor_open.gif')"; 
+        door.style.backgroundImage = "url('imgs/thedoor_open.gif')"; 
         console.log("door open");
         console.log("door open");
         var interval = setTimeout(()=>{
             
-            content.innerHTML=`<div id="door" class='hide' style='background-image: url(nextdoor.png);
+            content.innerHTML=`<div id="door" class='hide' style='background-image: url("imgs/nextdoor.png");
             background-size: cover;
             width: 843px;
             height: 536px;
@@ -238,7 +238,7 @@ function next_door(){
     content.innerHTML="";
     console.log("nextroom")
     console.log("nextroom")
-    document.body.style.backgroundImage ="url('next_room.gif')";
+    document.body.style.backgroundImage ="url('imgs/next_room.gif')";
     content.innerHTML=`<div id='photo' style='
     width: 211px;
     height: 145px;
@@ -290,7 +290,7 @@ function next_door(){
 }
 function show_photo(){
     content.innerHTML+=`
-    <div class='hide' style='background-image: url("photo.png");
+    <div class='hide' style='background-image: url("imgs/photo.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -306,7 +306,7 @@ function show_photo(){
 
 function show_dog(){
     content.innerHTML+=`
-        <div class='hide' id='dog_slep' style='background-image: url("dog.png");
+        <div class='hide' id='dog_slep' style='background-image: url("imgs/dog.png");
         background-size: cover;
         width: 843px;
         height: 536px;
@@ -322,7 +322,7 @@ function show_dog(){
 
 function show_massage(){
     content.innerHTML+=`
-    <div class='hide' id="getmassage" style='background-image: url("massage.png");
+    <div class='hide' id="getmassage" style='background-image: url("imgs/massage.png");
     background-size: cover;
     width: 816px;
     height: 536px;
@@ -337,7 +337,7 @@ function show_massage(){
 }
 function show_piano(){
     content.innerHTML+=`
-    <div class='hide' id='openpiano' style='background-image: url("piano.png");
+    <div class='hide' id='openpiano' style='background-image: url("imgs/piano.png");
     background-size: cover;
     width: 854px;
     height: 536px;
@@ -352,7 +352,7 @@ function show_piano(){
 }
 function show_floor(){
     content.innerHTML+=`
-    <div class='hide' style='background-image: url("floor.png");
+    <div class='hide' style='background-image: url("imgs/floor.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -368,7 +368,7 @@ function show_floor(){
 
 function show_table(){
     content.innerHTML+=`
-    <div class='hide' style='background-image: url("table.png");
+    <div class='hide' style='background-image: url("imgs/table.png");
     background-size: cover;
     width: 889px;
     height: 777px;
@@ -382,7 +382,7 @@ function show_table(){
 }
 function show_box2(){
     content.innerHTML+=`
-    <div class='hide' id='roombox2' style='background-image: url("box2.png");
+    <div class='hide' id='roombox2' style='background-image: url("imgs/box2.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -392,16 +392,16 @@ function show_box2(){
     border-radius: 12px;
     overflow: hidden;' > 
         <span class="photos" style='right: 67%;' >
-        <img class="imges" src='circle.png' style='top: 23%;position: absolute;right: 12%;'onclick="setphotos(this)"/></span>
+        <img class="imges" src='imgs/circle.png' style='top: 23%;position: absolute;right: 12%;'onclick="setphotos(this)"/></span>
 
         <span class="photos" style='right: 50%;' >
-        <img class="imges" src='circle.png' style='top: 23%;position: absolute;right: 12%;'onclick="setphotos(this)"/></span>
+        <img class="imges" src='imgs/circle.png' style='top: 23%;position: absolute;right: 12%;'onclick="setphotos(this)"/></span>
         
         <span class="photos" style='right: 34.5%;' >
-        <img class="imges" src='circle.png' style='top: 23%;position: absolute;right: 12%;'onclick="setphotos(this)"/></span>
+        <img class="imges" src='imgs/circle.png' style='top: 23%;position: absolute;right: 12%;'onclick="setphotos(this)"/></span>
 
         <span class="photos" style='right: 18%;'>
-        <img class="imges" src='circle.png' style='top: 23%;position: absolute;right: 12%;' onclick="setphotos(this)"/></span>
+        <img class="imges" src='imgs/circle.png' style='top: 23%;position: absolute;right: 12%;' onclick="setphotos(this)"/></span>
         <button class="exit" onclick="hide(event)">X</button>
     </div>
     
@@ -411,36 +411,36 @@ function show_box2(){
 var imgs;
 var box2=document.getElementById("roombox2");
 function setphotos(el){
-    console.log("photo")
-    console.log(el.src.match('circle.png'))
-    if(el.src.match('circle.png')){
-        el.src ='Heart.png'
-    }else if(el.src.match('Heart.png')){
-        el.src ='Star.png'
-    }else if(el.src.match('Star.png')){
-        el.src = 'triangle.png'
+    // console.log("photo")
+    // console.log(el.src.match('circle.png'))
+    if(el.src.match('imgs/circle.png')){
+        el.src ='imgs/Heart.png'
+    }else if(el.src.match('imgs/Heart.png')){
+        el.src ='imgs/Star.png'
+    }else if(el.src.match('imgs/Star.png')){
+        el.src = 'imgs/triangle.png'
     }else{
-        el.src='circle.png'
+        el.src='imgs/circle.png'
     }
     
     imgs = document.getElementsByClassName("imges");
     console.log(imgs.length);
     if(imgs[0].src.match('circle.png') && imgs[1].src.match('triangle.png') && imgs[2].src.match('Star.png') && imgs[3].src.match('Heart.png')){
-        document.getElementById("roombox2").style.backgroundImage = 'url("box2_open.png")'
+        document.getElementById("roombox2").style.backgroundImage = 'url("imgs/box2_open.png")'
         document.getElementById("roombox2").innerHTML=`<div style='
         width: 158px;
         height: 155px;
         right: 20%;
         top: 57%;
         position: absolute;' onclick="fooddog()"></div>`;
-        document.body.style.backgroundImage ="url('background_openedbox.gif')";
+        document.body.style.backgroundImage ="url('imgs/background_openedbox.gif')";
     }
     
 }
 
 function fooddog(){
     document.getElementById("roombox2").remove();
-    content.innerHTML+=`<img id="food_dog" src="food_dog.png"  alt="" style='width: 113px;
+    content.innerHTML+=`<img id="food_dog" src="imgs/food_dog.png"  alt="" style='width: 113px;
     left: 92%;
     top: 3%;
     position: absolute;
@@ -455,11 +455,11 @@ function eating_dog(){
     if(sholve){
         document.getElementById("food_dog").remove();  
         var dogup=document.getElementById("dog_slep");
-        dogup.style.backgroundImage = "url('dogup.gif')"; 
+        dogup.style.backgroundImage = "url('imgs/dogup.gif')"; 
 
         var interval = setTimeout(()=>{
-            dogup.style.backgroundImage = "url('dog_go.png')";
-            dogup.innerHTML+=`<img src="pianokey.png" style='width: 100px;
+            dogup.style.backgroundImage = "url('imgs/dog_go.png')";
+            dogup.innerHTML+=`<img src="imgs/pianokey.png" style='width: 100px;
             position: absolute;
             right: 45%;
             top: 28%;
@@ -475,22 +475,22 @@ function eating_dog(){
 function get_keypiano(){
     document.getElementById("dog_slep").remove();
     document.getElementById("dog").remove();
-    content.innerHTML+=`<img id="key_piano" src="pianokey.png"  alt="" style='width: 113px;
+    content.innerHTML+=`<img id="key_piano" src="imgs/pianokey.png"  alt="" style='width: 113px;
     left: 92%;
     top: 3%;
     position: absolute;
     opacity: 1;' onclick="this.style.opacity=.6; sholve=true;"></img>`
-    document.body.style.backgroundImage ="url('background_dogup.gif ')";
+    document.body.style.backgroundImage ="url('imgs/background_dogup.gif ')";
 }
 
 function open_piano(){
     if(sholve){
         document.getElementById("key_piano").remove();  
         var pianoopen=document.getElementById("openpiano");
-        pianoopen.style.backgroundImage = "url('piano_opening.gif')"; 
+        pianoopen.style.backgroundImage = "url('imgs/piano_opening.gif')"; 
         var interval = setTimeout(()=>{
-            pianoopen.style.backgroundImage = "url('piano_open.png')";
-            pianoopen.innerHTML+=`<img src="sticke.png" style='width: 610px;
+            pianoopen.style.backgroundImage = "url('imgs/piano_open.png')";
+            pianoopen.innerHTML+=`<img src="imgs/sticke.png" style='width: 610px;
             position: absolute;
             right: 17%;
             top: -11%;' onclick='get_stike()'/>`
@@ -503,26 +503,26 @@ function open_piano(){
 function get_stike(){
     document.getElementById("openpiano").remove();
     document.getElementById("piano").remove();
-    content.innerHTML+=`<img id="sticke" src="sticke.png"  alt="" style='width: 194px;
+    content.innerHTML+=`<img id="sticke" src="imgs/sticke.png"  alt="" style='width: 194px;
     left: 90%;
     top: 2%;
     position: absolute;
     opacity: 1;
     transform: rotate3d(1, 1, 1, 45deg);' onclick="this.style.opacity=.6; sholve=true;"></img>`
-    document.body.style.backgroundImage ="url('background_pianoopen.gif')";
+    document.body.style.backgroundImage ="url('imgs/background_pianoopen.gif')";
 }
 
 function get_massage(){
     if(sholve){
         document.getElementById("sticke").remove();  
         var getmass=document.getElementById("getmassage");
-        getmass.style.backgroundImage = "url('massagedown.gif')"; 
+        getmass.style.backgroundImage = "url('imgs/massagedown.gif')"; 
         console.log("dogup");
         console.log("dogup");
         var interval = setTimeout(()=>{
             document.getElementById("getmassage").remove();
             document.getElementById("massage").remove();
-            document.body.style.backgroundImage ="url('massageon_table.gif')";
+            document.body.style.backgroundImage ="url('imgs/massageon_table.gif')";
             content.innerHTML=`<div style='
             width: 69px;
             height: 59px;
@@ -535,7 +535,7 @@ function get_massage(){
 }
 
 function getmassage_fromdown(){
-    document.body.style.backgroundImage ="url('massagehold.gif')";
+    document.body.style.backgroundImage ="url('imgs/massagehold.gif')";
     content.innerHTML=`
     <div style='
     width: 119px;
@@ -548,7 +548,7 @@ function getmassage_fromdown(){
 
 function hold_massage(){
     content.innerHTML+=`
-    <div class='hide' id="massage_opened" style='background-image: url("showmassage.png");
+    <div class='hide' id="massage_opened" style='background-image: url("imgs/showmassage.png");
             background-size: cover;
             width: 854px;
             height: 536px;
@@ -563,7 +563,7 @@ function hold_massage(){
 }
 function openmassage(){
     content.innerHTML=`
-    <div class='hide' style='background-image: url("massage_opened.png");
+    <div class='hide' style='background-image: url("imgs/massage_opened.png");
             background-size: cover;
             width: 854px;
             height: 536px;
@@ -579,7 +579,7 @@ function openmassage(){
 
 function get_CD(){
     content.innerHTML="";
-    document.body.style.backgroundImage ="url('CD_get.gif')";
+    document.body.style.backgroundImage ="url('imgs/CD_get.gif')";
     content.innerHTML=`
     <div style='
     width: 107px;
@@ -589,10 +589,10 @@ function get_CD(){
     top: 29%;' onclick='go_toroom3()' ></div> `
 }
 function go_toroom3(){
-    document.body.style.backgroundImage = "url('room_three.gif')";
+    document.body.style.backgroundImage = "url('imgs/room_three.gif')";
     content.innerHTML=`
    
-    <img src="handle.png"  alt="" style='width: 98px;
+    <img src="imgs/handle.png"  alt="" style='width: 98px;
     left: 25%;
     bottom: 13%;
     opacity: .7;
@@ -603,7 +603,7 @@ function go_toroom3(){
 
 function position_ofhandlechange(handle){
     handle.remove();
-    content.innerHTML+=`<img src="handle.png" id="handle"  alt="" style='width: 108px;
+    content.innerHTML+=`<img src="imgs/handle.png" id="handle"  alt="" style='width: 108px;
     left: 92%;
     top: 23%;
     transform: rotate(-64deg);
@@ -619,7 +619,7 @@ function position_ofhandlechange(handle){
 
 function final_stage(){
     document.getElementById("arrow2").remove();
-    document.body.style.backgroundImage = "url('lastdoor.png')";
+    document.body.style.backgroundImage = "url('imgs/lastdoor.png')";
     document.getElementById("handle").style.top='4%';
     document.getElementById("handle").style.left='93%';
     content.innerHTML+=`
@@ -632,7 +632,7 @@ function final_stage(){
 }
 function open_finaldoor(){
     content.innerHTML+=`
-    <div class='hide' id="handlykey" style='background-image: url("handle_key.png");
+    <div class='hide' id="handlykey" style='background-image: url("imgs/handle_key.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -648,7 +648,7 @@ function open_finaldoor(){
 
 function put_handle(){
     if(sholve){
-    document.getElementById("handlykey").style.backgroundImage = "url('handle_puted.png')"; 
+    document.getElementById("handlykey").style.backgroundImage = "url('imgs/handle_puted.png')"; 
     document.getElementById("handle").remove();
     document.getElementById("divto_openhandelkey").remove();
     content.innerHTML+=`<div id='div_showbox3' style='width: 213px;
@@ -666,7 +666,7 @@ function put_handle(){
 }
 function open_finaldoor2(){
     content.innerHTML+=`
-    <div class='hide' id="handly_naleskey" style='background-image: url("handle_puted.png");
+    <div class='hide' id="handly_naleskey" style='background-image: url("imgs/handle_puted.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -681,7 +681,7 @@ function open_finaldoor2(){
 }
 function show_box3(){
     content.innerHTML+=`
-    <div class='hide' id='box3' style='background-image: url("box3.png");
+    <div class='hide' id='box3' style='background-image: url("imgs/box3.png");
     background-size: cover;
     width: 843px;
     height: 536px;
@@ -690,7 +690,7 @@ function show_box3(){
     top: 27%;
     border-radius: 12px;
     overflow: hidden;'> 
-    <img src="nail.png" style='position: absolute;
+    <img src="imgs/nail.png" style='position: absolute;
     left: 200px;
     top: 304px;
     opacity: .7;' onclick='get_nails()'>
@@ -701,7 +701,7 @@ function show_box3(){
 function get_nails(){
     document.getElementById("box3").remove();
     document.getElementById("div_showbox3").remove();
-    content.innerHTML+=`<img src="nail.png" alt="" style='width: 108px;
+    content.innerHTML+=`<img src="imgs/nail.png" alt="" style='width: 108px;
     left: 93%;
     top: 4%;
     opacity: 1;
@@ -710,7 +710,7 @@ function get_nails(){
 function put_nails(){
     if(sholve){
         content.innerHTML="";
-        document.body.style.backgroundImage ="url('the_end.png')"; 
+        document.body.style.backgroundImage ="url('imgs/the_end.png')"; 
         setTimeout(() => {
             document.body.innerHTML+=`
             <h2 style='position: absolute;
