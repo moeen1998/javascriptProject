@@ -1,77 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div>
-            <img  id="logo" src="logo-removebg-preview.png" alt="">
-            <h3>Gaming Club</h3>
-            <div class="divnav_right">
-                <select class="navright" id="select"> 
-                    <option>Language</option>
-                    <option class="language">English</option>
-                    <option class="language" >Arabic</option>
-                    <option  class="language">French</option>
-                    <option  class="language">Italian</option>
-                </select>
-                <button class="navright" id="login">Sign In</button>
-                <button class="navright" id="login">Sign Up</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/all.min.css">
+        <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/fontawesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body >
+        <audio id="musicplay" loop="true">
+            <source src="music.mp3"  type="audio/mpeg">
+        </audio>
+
+        <button onclick="musicplay(this)" data-ispaly="1"><i class="fa-solid fa-volume-xmark"></i></button>
+        
+        <div class="contener" >    
+            <div class="parent">
+                <div class="child"> 
+                    
+                    <img src="imgs/3.PNG" alt="">
+                    <p id="startgame" onclick="viduoplay()">Start Game</p>
+                    
+                </div>
             </div>
         </div>
-    </header>
-    
-    <article>
-
-        <div>
-            <img src="Mario game/images/mario.PNG">
-            <p>Super Mario</p>
-            <a href="Mario game/index.html"><button> Start</button></a>
-        </div>
         
-        <div>
-            <img src="monkyGame/imgs/typing_balloon.png">
-            <p>Typing Balloon</p>
-            <a href="monkyGame/index.html"><button> Start</button></a>
-        </div>
-
-        <div>
-            <img src="TypingSpeedTest/assets/typing_ jungle.jfif">
-            <p>Typing Jungle</p>
-            <a href="TypingSpeedTest/index.html"><button> Start</button></a>
-        </div>
-        
-        <div>
-            <img src="Flappy Bird/imgs/ground_bird.jpeg">
-            <p>Angry Bird</p>
-            <a href="Flappy Bird/index.html"><button>Start</button></a>            
-        </div>
-        <div>
-            <img src="fighter game/img/fighter.png">
-            <p>fighters</p>
-            <a href="fighter game/game.html"><button>Start</button></a>            
-        </div>
-        
-        <div>
-            <img src="Escape game/background2.gif">
-            <p>Escap Dream</p>
-            <a href="Escape game/play.html"><button>Start</button></a>            
-        </div>
-
-        <div>
-            <img src="fire/imgs/logo.PNG">
-            <p>Super Heroine</p>
-            <a href="fire/index.html"><button>Start</button></a>            
-        </div>
-        
-    </article>
-    <div style="clear:both;"></div>
-
-</body>
+        <script src="script.js"></script> 
+    </body>
 </html>
